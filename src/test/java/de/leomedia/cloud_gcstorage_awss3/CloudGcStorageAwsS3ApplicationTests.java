@@ -57,11 +57,11 @@ class PerformanceTest {
 
         generateFiles();
 
-        calculateUpload100ObjectsToS3_TimeMeasure();
-        calculateUpload100ObjectsToCloudStorage_TimeMeasure();
+        calculateUploadObjectsToS3_TimeMeasure();
+        calculateUploadObjectsToCloudStorage_TimeMeasure();
 
-        calculateDownload100ObjectsFromS3_TimeMeasure();
-        calculateDownload100ObjectsFromCloudStorage_TimeMeasure();
+        calculateDownloadObjectsFromS3_TimeMeasure();
+        calculateDownloadObjectsFromCloudStorage_TimeMeasure();
 
     }
 
@@ -69,7 +69,7 @@ class PerformanceTest {
      * This method uploads multiple objects to S3
      * and measures the current time it took in milliseconds.
      */
-    public void calculateUpload100ObjectsToS3_TimeMeasure() {
+    public void calculateUploadObjectsToS3_TimeMeasure() {
 
         AWSS3StorageService awss3StorageService = new AWSS3StorageService(s3Client, S3Presigner.builder().build());
 
@@ -90,7 +90,7 @@ class PerformanceTest {
      * This method downloads multiple objects from S3
      * and measures the current time it took in milliseconds.
      */
-    public void calculateDownload100ObjectsFromS3_TimeMeasure(){
+    public void calculateDownloadObjectsFromS3_TimeMeasure(){
 
         AWSS3StorageService awss3StorageService = new AWSS3StorageService(s3Client, S3Presigner.builder().build());
 
@@ -111,7 +111,7 @@ class PerformanceTest {
      * This method uploads multiple objects to Cloud Storage
      * and measures the current time it took in milliseconds.
      */
-    public void calculateUpload100ObjectsToCloudStorage_TimeMeasure() throws IOException {
+    public void calculateUploadObjectsToCloudStorage_TimeMeasure() throws IOException {
         GCStorageService googleCloudStorageService = new GCStorageService(projectId, gcJsonKeyPath);
 
         long startTime = System.currentTimeMillis();
@@ -131,7 +131,7 @@ class PerformanceTest {
      * This method downloads multiple objects from Cloud Storage
      * and measures the current time it took in milliseconds.
      */
-    public void calculateDownload100ObjectsFromCloudStorage_TimeMeasure() throws IOException {
+    public void calculateDownloadObjectsFromCloudStorage_TimeMeasure() throws IOException {
 
         GCStorageService googleCloudStorageService = new GCStorageService(projectId, gcJsonKeyPath);
 
@@ -166,7 +166,6 @@ class PerformanceTest {
                 logger.error("An error occurred while generating the file: " + e.getMessage());
             }
         }
-
     }
 
     /**

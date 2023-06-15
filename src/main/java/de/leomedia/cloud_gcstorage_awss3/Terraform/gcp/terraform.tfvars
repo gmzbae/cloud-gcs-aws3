@@ -1,0 +1,8 @@
+project_id = ""
+region = ""
+kms_key_ring = ""
+crypto_key_name = ""
+gc_bucket = ""
+gc_log_bucket = ""
+storage_class = ""
+rotation_period = ""
