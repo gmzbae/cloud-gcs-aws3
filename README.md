@@ -63,6 +63,14 @@ These 6 TEST variables can be set when running the ``PerformanceTest`` Class.
 - The `test_gc_encryption_key` defines the KMS Key Ring of GCP
 - The `test_aws_encryption_key` defines the KMS Key ARN of AWS
 
+Additionally, before running the project, the local Variables in the ``CloudGcStorageAwsS3Application`` Main Class should be set:
+
+```
+//Define object key name and file path to be uploaded and retrieved
+String key = "";
+String filePath = "";
+```
+
 ## Set up credentials
 
 
