@@ -56,7 +56,7 @@ TEST_FILE_COUNT=${test_file_count}
 TEST_GC_ENCRYPTION_KEY=${test_gc_encryption_key}
 TEST_AWS_ENCRYPTION_KEY=${test_aws_encryption_key}
 ```
-These 6 TEST variables can be set if running the ``PerformanceTest`` Class.
+These 6 TEST variables can be set when running the ``PerformanceTest`` Class.
 - The ``test_files_path`` defines the path where the generated files will be located.
 - The ``test_object_key_pattern``defines the object name pattern. As an example: "a1.txt" where "a" is the object pattern.
 - The `test_file_count` defines how many files will be generated, uploaded and how many signed URLs will be generated.
